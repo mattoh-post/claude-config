@@ -39,7 +39,7 @@ Trigger phrases: `스크럼 채워줘`, `데일리 스크럼 정리`, `오늘 �
 
 The routine prompt instructs Claude to follow `daily-scrum-sync/SKILL.md` end to end and report what changed plus any items needing manual review.
 
-**Note:** the skill operates entirely through the Linear and Notion MCP connectors, so the routine's allowed-tools / connector permissions must grant those MCP tools — local tools (Bash/Read/Write) alone are not enough for it to do real work.
+**Note:** the skill does all its real work through the Linear and Notion MCP connectors, which must stay attached to the routine. A run with only local tools (Bash/Read/Write) would fire but produce nothing.
 
 ### Verifying a run
 
